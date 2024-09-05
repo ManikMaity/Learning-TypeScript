@@ -67,6 +67,48 @@ const bankAcc:BankAcc = {
 }
 
 
+// Extend interface
+
+interface Book {
+    name: string,
+    price : number
+}
+
+interface Ebook extends Book{
+    fileType : string,
+    fileSize : number
+}
+
+
+
+const book1:Book = {
+    name : "Atomic Habit",
+    price : 199
+}
+
+const ebook1:Ebook = {
+    name : "Hallo",
+    price : 400,
+    fileSize : 4,
+    fileType : "pdf"
+}
+
+
+// Narrow way for union
+type Id = string | number;
+function printID(id:Id):string{
+    if (typeof id == "number"){
+        return `${id}`
+    }
+    else {
+        return id;
+    }
+}
+console.log(printID("manik123"));
+
+
+
+
 console.log(logIn(user1))
 console.log(user.firstName)
 console.log(getTotal([5, 6, 8, 7]))
