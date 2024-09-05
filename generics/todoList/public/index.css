@@ -1,0 +1,12 @@
+.todo-item{
+  display: flex;
+  border: 1px solid #000;
+  max-width: 200px;
+}
+
+.todo-items{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
